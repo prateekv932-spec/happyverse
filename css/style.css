@@ -1,0 +1,2124 @@
+/* =====================================================
+   HAPPYVERSE CLEAN STYLE.CSS
+   FILE 1 - PART 1
+===================================================== */
+
+
+/* ==========================
+      GLOBAL
+========================== */
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html,body{
+
+    width:100%;
+    min-height:100%;
+
+    overflow-x:hidden;
+
+    font-family:'Poppins',sans-serif;
+
+    background:#120022;
+
+}
+
+
+button{
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+
+
+/* ==========================
+      SPLASH SCREEN
+========================== */
+
+
+.splash{
+
+    height:100vh;
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+
+    background:
+
+    radial-gradient(
+    circle at top,
+    #c084fc,
+    #4c1d95 45%,
+    #10001f
+    );
+
+}
+
+
+
+.splash-content{
+
+    position:relative;
+
+    z-index:5;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+
+
+.splash-content h1{
+
+    font-size:45px;
+
+    animation:fadeIn 2s ease;
+
+}
+
+
+
+.splash-content p{
+
+    margin-top:10px;
+
+    opacity:.8;
+
+}
+
+
+
+.loading{
+
+    margin-top:30px;
+
+}
+
+
+
+.loading span{
+
+    display:inline-block;
+
+    height:10px;
+
+    width:10px;
+
+    margin:5px;
+
+    border-radius:50%;
+
+    background:white;
+
+    animation:loading 1s infinite;
+
+}
+
+
+
+.loading span:nth-child(2){
+
+    animation-delay:.2s;
+
+}
+
+
+.loading span:nth-child(3){
+
+    animation-delay:.4s;
+
+}
+
+
+
+
+
+@keyframes loading{
+
+    50%{
+
+        transform:translateY(-10px);
+
+        opacity:.5;
+
+    }
+
+}
+
+
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+
+/* ==========================
+      SCANNER
+========================== */
+
+
+.scanner-screen{
+
+
+    height:100vh;
+
+    width:100%;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    background:
+
+    radial-gradient(
+    circle,
+    #7c3aed,
+    #090014
+    );
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+.scanner-box{
+
+    position:relative;
+
+}
+
+
+
+.scanner-circle{
+
+
+    height:230px;
+
+    width:230px;
+
+
+    border-radius:50%;
+
+
+    overflow:hidden;
+
+
+    border:
+
+    3px solid rgba(255,255,255,.5);
+
+
+    box-shadow:
+
+    0 0 40px #c084fc;
+
+
+    position:relative;
+
+
+}
+
+
+
+
+.scanner-circle img{
+
+
+    width:100%;
+
+    height:100%;
+
+
+    object-fit:cover;
+
+
+    opacity:0;
+
+
+    transform:scale(.7);
+
+
+    transition:1s;
+
+
+}
+
+
+
+.scanner-circle img.show{
+
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+
+
+
+
+.scan-line{
+
+
+    position:absolute;
+
+
+    height:3px;
+
+    width:100%;
+
+
+    background:#00ffff;
+
+
+    top:0;
+
+
+    animation:scan 2s infinite;
+
+
+}
+
+
+
+@keyframes scan{
+
+
+    from{
+
+        top:0;
+
+    }
+
+
+    to{
+
+        top:100%;
+
+    }
+
+
+}
+
+
+
+.scanner-text{
+
+    margin-top:30px;
+
+    text-align:center;
+
+}
+
+
+
+#welcome{
+
+    font-size:30px;
+
+}
+
+
+#subtitle{
+
+    margin-top:10px;
+
+    opacity:.8;
+
+}
+
+
+
+.enter-button{
+
+
+    margin-top:40px;
+
+
+    padding:15px 35px;
+
+
+    border:none;
+
+
+    border-radius:40px;
+
+
+    background:white;
+
+
+    color:#7c3aed;
+
+
+    cursor:pointer;
+
+
+}
+
+/* =====================================================
+      HOME SCREEN
+===================================================== */
+
+
+.home{
+
+    min-height:100vh;
+
+    width:100%;
+
+    position:relative;
+
+    overflow:hidden;
+
+
+    padding:30px 20px;
+
+
+    color:white;
+
+
+    background:
+
+
+    linear-gradient(
+
+    180deg,
+
+    #16002d,
+
+    #35004f,
+
+    #7b2cbf
+
+    );
+
+
+}
+
+
+
+
+/* ==========================
+      BACKGROUND LAYERS
+========================== */
+
+
+#stars,
+#balloons,
+#hearts,
+#sparkles{
+
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+
+}
+
+
+
+
+#stars{
+
+    z-index:1;
+
+}
+
+
+#balloons{
+
+    z-index:2;
+
+}
+
+
+#hearts{
+
+    z-index:3;
+
+}
+
+
+#sparkles{
+
+    z-index:4;
+
+}
+
+
+
+
+
+/* ==========================
+      PROFILE
+========================== */
+
+
+.home-profile{
+
+
+    position:relative;
+
+    z-index:5;
+
+    text-align:center;
+
+
+}
+
+
+
+
+.profile-ring{
+
+
+    height:150px;
+
+    width:150px;
+
+
+    margin:auto;
+
+
+    padding:5px;
+
+
+    border-radius:50%;
+
+
+    background:
+
+
+    linear-gradient(
+
+    45deg,
+
+    #ff4ecd,
+
+    #a855f7,
+
+    #38bdf8
+
+    );
+
+
+
+    box-shadow:
+
+    0 0 35px #ff4ecd;
+
+
+
+    animation:
+
+    pulse 3s infinite;
+
+
+}
+
+
+
+
+.profile-ring img{
+
+
+    height:100%;
+
+    width:100%;
+
+
+    object-fit:cover;
+
+
+    border-radius:50%;
+
+
+    border:5px solid #20002c;
+
+
+}
+
+
+
+
+
+.home-profile h1{
+
+
+    margin-top:20px;
+
+    font-size:34px;
+
+
+}
+
+
+
+
+.home-profile h2{
+
+
+    margin-top:8px;
+
+    color:#ffd6ff;
+
+
+}
+
+
+
+.home-profile p{
+
+
+    margin-top:10px;
+
+    opacity:.8;
+
+
+}
+
+
+
+
+
+@keyframes pulse{
+
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+
+}
+
+
+
+
+
+
+
+/* ==========================
+      HOME CARDS
+========================== */
+
+
+.home-cards{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:20px;
+
+    margin-top:25px;
+
+}
+
+
+
+
+.home-card{
+
+    width:90%;
+
+    max-width:600px;
+
+    min-height:120px;
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+
+    padding:25px;
+
+
+    border-radius:25px;
+
+
+    background:rgba(255,255,255,.12);
+
+
+    backdrop-filter:blur(15px);
+
+
+    cursor:pointer;
+
+
+    transition:.35s ease;
+
+}
+
+
+
+
+.home-card:hover{
+
+
+    transform:translateY(-7px);
+
+
+    box-shadow:
+
+    0 0 30px rgba(255,255,255,.25);
+
+
+}
+
+
+
+
+.card-icon{
+
+
+    font-size:40px;
+
+
+}
+
+
+
+
+.home-card h3{
+
+
+    font-size:21px;
+
+
+}
+
+
+
+.home-card p{
+
+
+    margin-top:5px;
+
+    opacity:.8;
+
+
+}
+
+
+
+
+
+.home-footer{
+
+
+    position:relative;
+
+    z-index:5;
+
+
+    text-align:center;
+
+
+    margin-top:45px;
+
+
+    opacity:.7;
+
+
+}
+
+
+
+
+
+
+/* ==========================
+      PARTICLES
+========================== */
+
+
+.star{
+
+
+    position:absolute;
+
+
+    background:white;
+
+
+    border-radius:50%;
+
+
+    animation:
+
+    twinkle 2s infinite;
+
+
+}
+
+
+
+
+
+.balloon{
+
+
+    position:absolute;
+
+
+    bottom:-120px;
+
+
+    height:70px;
+
+
+    width:55px;
+
+
+    border-radius:50%;
+
+
+    animation:
+
+    float 12s linear infinite;
+
+
+}
+
+
+
+
+.balloon:after{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    height:60px;
+
+
+    width:2px;
+
+
+    background:white;
+
+
+    top:65px;
+
+
+    left:50%;
+
+
+}
+
+
+
+
+.heart{
+
+
+    position:absolute;
+
+
+    bottom:-40px;
+
+
+    font-size:25px;
+
+
+    animation:
+
+    heartMove 8s linear infinite;
+
+
+}
+
+
+
+
+.sparkle{
+
+
+    position:absolute;
+
+
+    font-size:22px;
+
+
+    animation:
+
+    sparkle 2s infinite;
+
+
+}
+
+
+
+
+
+
+
+@keyframes twinkle{
+
+
+    50%{
+
+        opacity:.3;
+
+        transform:scale(.7);
+
+    }
+
+}
+
+
+
+
+@keyframes float{
+
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+
+    to{
+
+        transform:translateY(-120vh);
+
+    }
+
+
+}
+
+
+
+
+@keyframes heartMove{
+
+
+    from{
+
+        transform:translateY(0);
+
+        opacity:0;
+
+    }
+
+
+    20%{
+
+        opacity:1;
+
+    }
+
+
+    to{
+
+        transform:translateY(-120vh);
+
+        opacity:0;
+
+    }
+
+
+}
+
+
+
+
+@keyframes sparkle{
+
+
+    50%{
+
+        opacity:.3;
+
+        transform:scale(1.4);
+
+    }
+
+}
+
+
+
+
+
+
+
+/* ==========================
+      MOBILE HOME
+========================== */
+
+
+@media(max-width:500px){
+
+
+
+.home-profile h1{
+
+    font-size:28px;
+
+}
+
+
+
+
+.profile-ring{
+
+
+    height:125px;
+
+    width:125px;
+
+
+}
+
+
+
+
+.home-card{
+
+
+    padding:18px;
+
+
+}
+
+
+
+
+.card-icon{
+
+
+    font-size:32px;
+
+
+}
+
+
+
+}
+
+/* =====================================================
+      MEMORIES PAGE
+===================================================== */
+
+
+.memories-page{
+
+    min-height:100vh;
+
+    width:100%;
+
+
+    padding:25px 20px 60px;
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+    color:white;
+
+
+    background:
+
+
+    radial-gradient(
+
+    circle at top,
+
+    #c026d3,
+
+    #4c1d95 45%,
+
+    #120024
+
+    );
+
+
+}
+
+
+
+
+#memory-stars{
+
+
+    position:absolute;
+
+    inset:0;
+
+
+    pointer-events:none;
+
+
+}
+
+
+
+
+
+
+.memory-star{
+
+
+    position:absolute;
+
+
+    height:3px;
+
+    width:3px;
+
+
+    background:white;
+
+
+    border-radius:50%;
+
+
+    box-shadow:
+
+    0 0 10px white;
+
+
+    animation:
+
+    twinkle 2s infinite;
+
+
+}
+
+
+
+
+
+
+.memories-header{
+
+
+    position:relative;
+
+    z-index:5;
+
+
+    text-align:center;
+
+
+    margin-bottom:40px;
+
+
+}
+
+
+
+.memories-header h1{
+
+
+    font-size:32px;
+
+
+}
+
+
+
+.memories-header p{
+
+
+    margin-top:10px;
+
+    opacity:.8;
+
+
+}
+
+
+
+
+
+.back-button{
+
+
+    position:absolute;
+
+
+    left:0;
+
+    top:0;
+
+
+    height:45px;
+
+    width:45px;
+
+
+    border-radius:50%;
+
+
+    border:none;
+
+
+    background:
+
+    rgba(255,255,255,.15);
+
+
+    color:white;
+
+
+    font-size:25px;
+
+
+}
+
+
+
+
+
+/* ==========================
+      SCRAPBOOK
+========================== */
+
+
+
+.scrapbook{
+
+
+    position:relative;
+
+    z-index:5;
+
+
+    max-width:600px;
+
+
+    margin:auto;
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:35px;
+
+
+}
+
+
+
+
+
+.scrap-card{
+
+
+    position:relative;
+
+
+    background:
+
+
+    linear-gradient(
+
+    145deg,
+
+    #ffffff,
+
+    #ffeef8
+
+    );
+
+
+    color:#3b0764;
+
+
+    border-radius:20px;
+
+
+    padding:18px;
+
+
+    box-shadow:
+
+    0 15px 40px rgba(0,0,0,.35);
+
+
+    cursor:pointer;
+
+
+    transition:.4s;
+
+
+}
+
+
+
+.scrap-card:hover{
+
+
+    transform:
+
+    translateY(-8px);
+
+
+}
+
+
+
+
+
+.pin{
+
+
+    position:absolute;
+
+
+    top:-20px;
+
+
+    left:50%;
+
+
+    transform:translateX(-50%);
+
+
+    font-size:30px;
+
+
+}
+
+
+
+
+.scrap-photo{
+
+
+    height:280px;
+
+    width:100%;
+
+
+    border-radius:15px;
+
+
+    overflow:hidden;
+
+
+    background:black;
+
+
+}
+
+
+
+
+.scrap-photo img{
+
+
+    height:100%;
+
+    width:100%;
+
+
+    object-fit:contain;
+
+
+}
+
+
+
+
+.scrap-text{
+
+
+    padding:20px 10px;
+
+
+    text-align:center;
+
+
+}
+
+
+
+.scrap-text h2{
+
+
+    font-size:23px;
+
+
+}
+
+
+
+.scrap-text p{
+
+
+    margin-top:15px;
+
+
+    line-height:1.6;
+
+
+}
+
+
+
+
+
+
+/* ==========================
+      IMAGE POPUP
+========================== */
+
+
+.memory-popup{
+
+
+    position:fixed;
+
+
+    inset:0;
+
+
+    background:
+
+    rgba(0,0,0,.75);
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    z-index:100;
+
+
+    padding:20px;
+
+
+}
+
+
+
+
+.popup-box{
+
+
+    width:100%;
+
+
+    max-width:400px;
+
+
+    background:
+
+    rgba(255,255,255,.15);
+
+
+    backdrop-filter:blur(20px);
+
+
+    border-radius:25px;
+
+
+    padding:20px;
+
+
+    color:white;
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+.popup-box img{
+
+
+    width:100%;
+
+
+    height:300px;
+
+
+    object-fit:contain;
+
+
+    background:black;
+
+
+    border-radius:20px;
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+      PLAYLIST PAGE
+===================================================== */
+
+
+.playlist-page{
+
+
+    min-height:100vh;
+
+
+    width:100%;
+
+
+    padding:25px 20px 60px;
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+    color:white;
+
+
+
+    background:
+
+
+    radial-gradient(
+
+    circle at top,
+
+    #a855f7,
+
+    #3b0764,
+
+    #120024
+
+    );
+
+
+}
+
+
+
+
+
+
+
+.playlist-header{
+
+
+    position:relative;
+
+    z-index:5;
+
+
+    text-align:center;
+
+
+}
+
+
+
+.playlist-header h1{
+
+
+    font-size:32px;
+
+
+}
+
+
+
+.playlist-header p{
+
+
+    margin-top:8px;
+
+    opacity:.8;
+
+
+}
+
+
+
+
+
+
+
+/* MUSIC CARD */
+
+
+.music-player{
+
+
+    position:relative;
+
+
+    z-index:5;
+
+
+    max-width:420px;
+
+
+    margin:35px auto;
+
+
+    padding:30px 20px;
+
+
+    border-radius:30px;
+
+
+    background:
+
+    rgba(255,255,255,.12);
+
+
+    backdrop-filter:blur(20px);
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+.album-cover{
+
+
+    height:250px;
+
+
+    width:250px;
+
+
+    margin:auto;
+
+
+    border-radius:25px;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+
+.album-cover img{
+
+
+    height:100%;
+
+
+    width:100%;
+
+
+    object-fit:cover;
+
+
+}
+
+
+
+
+
+
+.music-player h2{
+
+
+    margin-top:25px;
+
+    font-size:25px;
+
+
+}
+
+
+
+
+
+.visualizer{
+
+
+    height:45px;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    gap:6px;
+
+
+    margin:25px;
+
+
+}
+
+
+
+.visualizer span{
+
+
+    height:20px;
+
+
+    width:5px;
+
+
+    background:white;
+
+
+    border-radius:10px;
+
+
+}
+
+
+
+
+.playing .visualizer span{
+
+
+    animation:
+
+    musicWave .8s infinite alternate;
+
+
+}
+
+
+
+
+
+@keyframes musicWave{
+
+
+    to{
+
+        height:45px;
+
+    }
+
+
+}
+
+
+
+
+
+
+/* PROGRESS */
+
+
+.progress{
+
+
+    height:8px;
+
+
+    width:100%;
+
+
+    background:
+
+    rgba(255,255,255,.25);
+
+
+    border-radius:20px;
+
+
+}
+
+
+
+
+#progressBar{
+
+
+    height:100%;
+
+
+    width:0%;
+
+
+    background:white;
+
+
+}
+
+
+
+
+
+
+.time-box{
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    font-size:13px;
+
+
+    margin-bottom:8px;
+
+
+}
+
+
+
+
+
+.progress input{
+
+
+    width:100%;
+
+
+}
+
+
+
+
+
+
+
+/* CONTROLS */
+
+
+.controls{
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    gap:25px;
+
+
+    margin-top:25px;
+
+
+}
+
+
+
+.controls button{
+
+
+    height:50px;
+
+
+    width:50px;
+
+
+    border-radius:50%;
+
+
+    border:none;
+
+
+    cursor:pointer;
+
+
+    font-size:20px;
+
+
+    background:
+
+    rgba(255,255,255,.2);
+
+
+    color:white;
+
+
+}
+
+
+
+.play-button{
+
+
+    height:65px!important;
+
+
+    width:65px!important;
+
+
+    background:white!important;
+
+
+    color:#7c3aed!important;
+
+
+}
+
+
+
+
+
+
+
+/* SONG LIST */
+
+
+.song-list{
+
+
+    position:relative;
+
+
+    z-index:5;
+
+
+    max-width:420px;
+
+
+    margin:auto;
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:15px;
+
+
+}
+
+
+
+.song-item{
+
+
+    padding:18px;
+
+
+    border-radius:20px;
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+    background:
+
+    rgba(255,255,255,.12);
+
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+
+.song-item:hover{
+
+
+    transform:translateX(8px);
+
+
+}
+
+
+
+
+
+
+
+/* ==========================
+      MOBILE
+========================== */
+
+
+@media(max-width:600px){
+
+
+
+.scrap-photo{
+
+    height:240px;
+
+}
+
+
+
+
+.album-cover{
+
+
+    height:210px;
+
+    width:210px;
+
+
+}
+
+
+
+.playlist-header h1{
+
+
+    font-size:27px;
+
+
+}
+
+
+
+.music-player{
+
+
+    padding:25px 15px;
+
+
+}
+
+
+
+}
+
+/* ===========================
+      RESPONSIVE HOME CARDS
+=========================== */
+
+@media(max-width:1200px){
+
+.home-cards{
+
+
+
+}
+
+}
+
+@media(max-width:700px){
+
+.home-cards{
+
+grid-template-columns:1fr;
+
+padding:0 20px;
+
+}
+
+.home-card{
+
+height:auto;
+
+}
+
+}

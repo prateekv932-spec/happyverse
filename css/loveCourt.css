@@ -1,0 +1,1805 @@
+/* =====================================================
+        HAPPYVERSE 3.0
+        OUR LOVE COURT CSS
+        PART 1
+===================================================== */
+
+
+
+*{
+    box-sizing:border-box;
+}
+
+
+
+
+
+/* =====================================================
+        MAIN COURT PAGE
+===================================================== */
+
+
+.love-court-page{
+
+
+    width:100%;
+
+    min-height:100vh;
+
+
+    position:relative;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    overflow:hidden;
+
+
+    background:#080306;
+
+
+    font-family:'Poppins',sans-serif;
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+        COURT BACKGROUND
+===================================================== */
+
+
+.court-bg{
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+
+    background:
+
+
+    radial-gradient(
+        circle at center,
+        #4a1428 0%,
+        #18030b 45%,
+        #050104 100%
+    );
+
+
+
+    z-index:0;
+
+
+}
+
+
+
+
+
+
+
+/* Golden light effect */
+
+
+.court-bg::after{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:500px;
+
+    height:500px;
+
+
+
+    top:50%;
+
+    left:50%;
+
+
+
+    transform:translate(-50%,-50%);
+
+
+
+    background:
+
+    radial-gradient(
+        circle,
+        rgba(232,196,124,.15),
+        transparent 70%
+    );
+
+
+
+    animation:courtGlow 5s infinite alternate;
+
+
+}
+
+
+
+
+
+@keyframes courtGlow{
+
+
+from{
+
+opacity:.5;
+
+}
+
+
+to{
+
+opacity:1;
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+        PARTICLES
+===================================================== */
+
+
+.court-particles{
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    overflow:hidden;
+
+
+    pointer-events:none;
+
+
+    z-index:2;
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+        INTRO SCREEN
+===================================================== */
+
+
+.court-intro{
+
+
+    position:relative;
+
+
+    z-index:5;
+
+
+    text-align:center;
+
+
+    width:90%;
+
+
+    max-width:650px;
+
+
+    padding:40px;
+
+
+    background:
+
+
+    rgba(255,255,255,.08);
+
+
+
+    backdrop-filter:blur(20px);
+
+
+
+    border:
+
+
+    1px solid rgba(232,196,124,.3);
+
+
+
+    border-radius:25px;
+
+
+
+    box-shadow:
+
+
+    0 30px 80px rgba(0,0,0,.6);
+
+
+
+    animation:courtAppear 1.2s ease;
+
+
+
+}
+
+
+
+
+
+
+
+
+@keyframes courtAppear{
+
+
+from{
+
+
+opacity:0;
+
+
+transform:
+
+translateY(40px)
+scale(.9);
+
+
+}
+
+
+
+to{
+
+
+opacity:1;
+
+
+transform:
+
+translateY(0)
+scale(1);
+
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+.court-intro h1{
+
+
+    font-family:'Caveat',cursive;
+
+
+    font-size:4rem;
+
+
+    color:#e8c47c;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+
+
+.court-intro h2{
+
+
+    color:#f5dca5;
+
+
+    font-size:1.4rem;
+
+
+    letter-spacing:2px;
+
+
+}
+
+
+
+
+
+.court-intro p{
+
+
+    color:#d8bbc5;
+
+
+    font-size:1.1rem;
+
+
+    margin:12px;
+
+
+    letter-spacing:1px;
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+        BUTTON STYLE
+===================================================== */
+
+
+.court-intro button,
+.case-file button,
+.quiz-box button,
+.verdict-box button{
+
+
+    margin-top:30px;
+
+
+    padding:
+
+
+    15px 35px;
+
+
+
+    border-radius:30px;
+
+
+
+    border:
+
+
+    1px solid #e8c47c;
+
+
+
+    background:
+
+
+    linear-gradient(
+        135deg,
+        #681326,
+        #9d304d
+    );
+
+
+
+    color:#ffe7a8;
+
+
+
+    font-size:1rem;
+
+
+    letter-spacing:2px;
+
+
+
+    cursor:pointer;
+
+
+
+    transition:.4s ease;
+
+
+}
+
+
+
+
+
+
+
+.court-intro button:hover,
+.case-file button:hover,
+.quiz-box button:hover,
+.verdict-box button:hover{
+
+
+    transform:
+
+    translateY(-5px)
+    scale(1.05);
+
+
+
+    box-shadow:
+
+
+    0 15px 35px rgba(232,196,124,.35);
+
+
+
+}
+
+/* =====================================================
+        CASE FILE SCREEN
+        PART 2
+===================================================== */
+
+
+
+
+
+.case-file{
+
+
+    position:relative;
+
+
+    z-index:5;
+
+
+
+    width:90%;
+
+
+    max-width:600px;
+
+
+
+    padding:45px;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.08);
+
+
+
+    backdrop-filter:blur(20px);
+
+
+
+    border-radius:30px;
+
+
+
+    border:
+
+
+    1px solid rgba(232,196,124,.35);
+
+
+
+    text-align:center;
+
+
+
+    box-shadow:
+
+
+    0 30px 80px rgba(0,0,0,.7);
+
+
+
+    animation:
+
+    caseAppear 1s ease;
+
+
+
+}
+
+
+
+
+
+
+@keyframes caseAppear{
+
+
+from{
+
+
+opacity:0;
+
+
+transform:
+
+scale(.8)
+translateY(50px);
+
+
+}
+
+
+to{
+
+
+opacity:1;
+
+
+transform:
+
+scale(1)
+translateY(0);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+.case-file h1{
+
+
+    font-family:'Caveat',cursive;
+
+
+    font-size:3.5rem;
+
+
+    color:#e8c47c;
+
+
+}
+
+
+
+
+
+
+.case-file h2{
+
+
+    margin-top:20px;
+
+
+    color:#ffe5a8;
+
+
+    font-size:1.6rem;
+
+
+}
+
+
+
+
+
+
+.case-file p{
+
+
+    color:#d8bbc5;
+
+
+    font-size:1.2rem;
+
+
+}
+
+
+
+
+
+
+
+
+/* Charges Box */
+
+
+.charges{
+
+
+    margin-top:25px;
+
+
+    padding:20px;
+
+
+
+    background:
+
+
+    rgba(0,0,0,.25);
+
+
+
+    border-radius:20px;
+
+
+
+}
+
+
+
+
+
+
+.charges p{
+
+
+    margin:15px 0;
+
+
+    color:#ffd9e2;
+
+
+    font-size:1.1rem;
+
+
+
+    animation:
+
+    chargeAppear .8s ease forwards;
+
+
+    opacity:0;
+
+
+}
+
+
+
+
+
+.charges p:nth-child(1){
+
+animation-delay:.2s;
+
+}
+
+
+.charges p:nth-child(2){
+
+animation-delay:.4s;
+
+}
+
+
+.charges p:nth-child(3){
+
+animation-delay:.6s;
+
+}
+
+
+.charges p:nth-child(4){
+
+animation-delay:.8s;
+
+}
+
+
+
+
+
+
+@keyframes chargeAppear{
+
+
+from{
+
+
+opacity:0;
+
+
+transform:
+
+translateX(-30px);
+
+
+}
+
+
+to{
+
+
+opacity:1;
+
+
+transform:
+
+translateX(0);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================================
+        QUIZ / LOVE TRIAL SCREEN
+===================================================== */
+
+
+
+
+
+.quiz-box{
+
+
+    position:relative;
+
+
+    z-index:5;
+
+
+    width:90%;
+
+
+    max-width:650px;
+
+
+
+    padding:40px;
+
+
+
+    text-align:center;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.09);
+
+
+
+    backdrop-filter:blur(25px);
+
+
+
+    border-radius:30px;
+
+
+
+    border:
+
+
+    1px solid rgba(232,196,124,.35);
+
+
+
+    box-shadow:
+
+
+    0 30px 80px rgba(0,0,0,.7);
+
+
+
+    animation:
+
+    quizAppear 1s ease;
+
+
+
+}
+
+
+
+
+
+
+
+
+@keyframes quizAppear{
+
+
+from{
+
+
+opacity:0;
+
+
+transform:
+
+scale(.9)
+translateY(40px);
+
+
+
+}
+
+
+to{
+
+
+opacity:1;
+
+
+transform:
+
+scale(1)
+translateY(0);
+
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+.quiz-box h1{
+
+
+    font-family:'Caveat',cursive;
+
+
+    font-size:3.5rem;
+
+
+    color:#e8c47c;
+
+
+}
+
+
+
+
+
+
+
+.quiz-box h2{
+
+
+    color:#f7dfa3;
+
+
+    margin-top:15px;
+
+
+}
+
+
+
+
+
+
+
+.question{
+
+
+    margin-top:35px;
+
+
+    font-family:'Caveat',cursive;
+
+
+    font-size:2rem;
+
+
+    color:#fff1d0;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* Answer Buttons Container */
+
+
+.answer-box{
+
+
+    margin-top:30px;
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:15px;
+
+
+
+}
+
+
+
+
+
+
+
+
+.answer-box button{
+
+
+    width:100%;
+
+
+
+    padding:18px;
+
+
+
+    border-radius:18px;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.12);
+
+
+
+    border:
+
+
+    1px solid rgba(232,196,124,.4);
+
+
+
+    color:#ffe8b0;
+
+
+
+    font-size:1.05rem;
+
+
+
+    cursor:pointer;
+
+
+
+    transition:.35s ease;
+
+
+}
+
+
+
+
+
+
+
+
+.answer-box button:hover{
+
+
+    background:
+
+
+    linear-gradient(
+    135deg,
+    #681326,
+    #a33b55
+    );
+
+
+
+    transform:
+
+    translateY(-5px);
+
+
+
+    box-shadow:
+
+
+    0 10px 30px rgba(232,196,124,.3);
+
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+        FLOATING HEART EFFECTS
+===================================================== */
+
+
+.court-heart{
+
+
+    position:absolute;
+
+
+
+    bottom:-40px;
+
+
+
+    font-size:22px;
+
+
+
+    animation:
+
+
+    courtHeartFloat 8s linear forwards;
+
+
+
+    opacity:.7;
+
+
+
+    z-index:3;
+
+
+
+}
+
+
+
+
+
+
+
+
+@keyframes courtHeartFloat{
+
+
+0%{
+
+
+transform:
+
+translateY(0)
+scale(.5)
+rotate(0deg);
+
+
+
+opacity:0;
+
+
+}
+
+
+
+30%{
+
+
+opacity:1;
+
+
+}
+
+
+
+100%{
+
+
+transform:
+
+translateY(-110vh)
+scale(1.2)
+rotate(360deg);
+
+
+
+opacity:0;
+
+
+}
+
+
+}
+
+/* =====================================================
+        COURT VERDICT SCREEN
+        PART 3
+===================================================== */
+
+
+
+
+
+
+.verdict-page{
+
+
+    position:relative;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+
+}
+
+
+
+
+
+
+
+
+.verdict-box{
+
+
+    position:relative;
+
+
+    z-index:5;
+
+
+
+    width:90%;
+
+
+    max-width:700px;
+
+
+
+    padding:50px 40px;
+
+
+
+    text-align:center;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.10);
+
+
+
+    backdrop-filter:blur(25px);
+
+
+
+    border-radius:35px;
+
+
+
+    border:
+
+
+    1px solid rgba(232,196,124,.5);
+
+
+
+    box-shadow:
+
+
+    0 40px 100px rgba(0,0,0,.8);
+
+
+
+    animation:
+
+
+    verdictAppear 1.2s ease;
+
+
+
+}
+
+
+
+
+
+
+
+
+@keyframes verdictAppear{
+
+
+from{
+
+
+opacity:0;
+
+
+transform:
+
+scale(.7)
+translateY(80px);
+
+
+
+}
+
+
+to{
+
+
+opacity:1;
+
+
+transform:
+
+scale(1)
+translateY(0);
+
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+.verdict-box h1{
+
+
+    font-family:'Caveat',cursive;
+
+
+    font-size:4rem;
+
+
+    color:#e8c47c;
+
+
+    margin-bottom:30px;
+
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+        GUILTY STAMP
+===================================================== */
+
+
+
+
+
+
+.stamp{
+
+
+    display:inline-flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+
+    width:220px;
+
+
+    height:100px;
+
+
+
+    border:
+
+
+    5px solid #e63946;
+
+
+
+    color:#ff4d6d;
+
+
+
+    font-size:2.8rem;
+
+
+
+    font-weight:800;
+
+
+
+    letter-spacing:3px;
+
+
+
+    transform:
+
+    rotate(-12deg);
+
+
+
+    border-radius:15px;
+
+
+
+    animation:
+
+
+    stampDrop 1s ease;
+
+
+
+    text-shadow:
+
+    0 0 20px rgba(255,80,120,.6);
+
+
+
+}
+
+
+
+
+
+
+
+@keyframes stampDrop{
+
+
+0%{
+
+
+opacity:0;
+
+
+transform:
+
+scale(2)
+rotate(-30deg);
+
+
+
+}
+
+
+70%{
+
+
+transform:
+
+scale(.9)
+rotate(-12deg);
+
+
+
+}
+
+
+
+100%{
+
+
+opacity:1;
+
+
+transform:
+
+scale(1)
+rotate(-12deg);
+
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+.verdict-box h2{
+
+
+    margin-top:35px;
+
+
+
+    color:#ffe6b0;
+
+
+
+    font-size:1.8rem;
+
+
+
+}
+
+
+
+
+
+
+
+
+.verdict-text{
+
+
+    margin-top:30px;
+
+
+    padding:25px;
+
+
+
+    background:
+
+
+    rgba(0,0,0,.25);
+
+
+
+    border-radius:20px;
+
+
+
+}
+
+
+
+
+
+
+
+.verdict-text p{
+
+
+    color:#ffe0e8;
+
+
+    font-size:1.2rem;
+
+
+    margin:15px;
+
+
+
+}
+
+
+
+
+
+
+
+
+.punishment{
+
+
+    margin-top:30px;
+
+
+
+    font-family:'Caveat',cursive;
+
+
+    font-size:2rem;
+
+
+
+    color:#e8c47c;
+
+
+
+    line-height:1.5;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================================
+        HEART EXPLOSION EFFECT
+===================================================== */
+
+
+
+
+
+
+.love-explosion-heart{
+
+
+    position:absolute;
+
+
+    font-size:25px;
+
+
+
+    animation:
+
+
+    explosionHeart 3s ease forwards;
+
+
+
+    pointer-events:none;
+
+
+
+}
+
+
+
+
+
+
+
+@keyframes explosionHeart{
+
+
+0%{
+
+
+transform:
+
+translate(0,0)
+scale(.2);
+
+
+
+opacity:1;
+
+
+
+}
+
+
+
+100%{
+
+
+transform:
+
+translate(var(--x),var(--y))
+scale(1.5);
+
+
+
+opacity:0;
+
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+        MOBILE RESPONSIVE
+===================================================== */
+
+
+
+
+
+@media(max-width:600px){
+
+
+
+
+
+.love-court-page{
+
+
+    padding:20px;
+
+
+}
+
+
+
+
+
+.court-intro,
+.case-file,
+.quiz-box,
+.verdict-box{
+
+
+    padding:30px 20px;
+
+
+
+}
+
+
+
+
+
+
+.court-intro h1,
+.quiz-box h1,
+.verdict-box h1{
+
+
+    font-size:2.8rem;
+
+
+}
+
+
+
+
+
+
+.case-file h1{
+
+
+    font-size:2.8rem;
+
+
+}
+
+
+
+
+
+
+.question{
+
+
+    font-size:1.6rem;
+
+
+}
+
+
+
+
+
+
+.stamp{
+
+
+    width:170px;
+
+
+    height:80px;
+
+
+    font-size:2rem;
+
+
+}
+
+
+
+
+
+
+.verdict-box h2{
+
+
+    font-size:1.4rem;
+
+
+}
+
+
+
+
+
+.verdict-text p{
+
+
+    font-size:.95rem;
+
+
+}
+
+
+
+.punishment{
+
+
+    font-size:1.6rem;
+
+
+}
+
+
+
+
+}

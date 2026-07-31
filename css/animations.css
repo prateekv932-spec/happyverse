@@ -1,0 +1,548 @@
+/* =====================================================
+   HAPPYVERSE ANIMATIONS
+===================================================== */
+
+
+/* ===========================
+   SPLASH LOADING
+=========================== */
+
+
+@keyframes loading{
+
+
+    0%{
+
+        transform:translateY(0);
+
+        opacity:.5;
+
+    }
+
+
+    50%{
+
+        transform:translateY(-10px);
+
+        opacity:1;
+
+    }
+
+
+    100%{
+
+        transform:translateY(0);
+
+        opacity:.5;
+
+    }
+
+}
+
+
+
+
+/* ===========================
+   FADE IN
+=========================== */
+
+
+@keyframes fadeIn{
+
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+
+}
+
+
+
+
+
+/* ===========================
+   SCANNER LINE
+=========================== */
+
+
+@keyframes scan{
+
+
+    0%{
+
+        top:0;
+
+    }
+
+
+    50%{
+
+        top:100%;
+
+    }
+
+
+    100%{
+
+        top:0;
+
+    }
+
+
+}
+
+
+
+
+
+/* ===========================
+   PROFILE GLOW
+=========================== */
+
+
+@keyframes pulse{
+
+
+    0%{
+
+
+        transform:scale(1);
+
+
+        box-shadow:
+
+        0 0 25px #ff4ecd;
+
+
+    }
+
+
+
+    50%{
+
+
+        transform:scale(1.05);
+
+
+        box-shadow:
+
+        0 0 60px #ff4ecd;
+
+
+    }
+
+
+
+    100%{
+
+
+        transform:scale(1);
+
+
+        box-shadow:
+
+        0 0 25px #ff4ecd;
+
+
+    }
+
+
+}
+
+
+
+
+
+
+/* ===========================
+   STARS
+=========================== */
+
+
+@keyframes twinkle{
+
+
+    0%{
+
+
+        opacity:.2;
+
+
+        transform:scale(.5);
+
+
+    }
+
+
+    50%{
+
+
+        opacity:1;
+
+
+        transform:scale(1.8);
+
+
+    }
+
+
+    100%{
+
+
+        opacity:.2;
+
+
+        transform:scale(.5);
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+/* ===========================
+   BALLOONS
+=========================== */
+
+
+@keyframes float{
+
+
+    0%{
+
+
+        transform:
+
+        translateY(0)
+
+        rotate(0deg);
+
+
+    }
+
+
+
+    50%{
+
+
+        transform:
+
+        translateY(-60vh)
+
+        rotate(10deg);
+
+
+    }
+
+
+
+    100%{
+
+
+        transform:
+
+        translateY(-130vh)
+
+        rotate(-10deg);
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+/* ===========================
+   HEARTS
+=========================== */
+
+
+@keyframes heartMove{
+
+
+    0%{
+
+
+        transform:
+
+        translateY(0)
+
+        scale(.5);
+
+
+        opacity:0;
+
+
+    }
+
+
+
+    20%{
+
+
+        opacity:1;
+
+
+    }
+
+
+
+
+    100%{
+
+
+        transform:
+
+        translateY(-120vh)
+
+        scale(1.5);
+
+
+        opacity:0;
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+/* ===========================
+   SPARKLES
+=========================== */
+
+
+@keyframes sparkle{
+
+
+    0%{
+
+
+        opacity:0;
+
+
+        transform:scale(.5)
+        rotate(0deg);
+
+
+    }
+
+
+
+    50%{
+
+
+        opacity:1;
+
+
+        transform:
+
+        scale(1.5)
+
+        rotate(180deg);
+
+
+    }
+
+
+
+    100%{
+
+
+        opacity:0;
+
+
+        transform:
+
+        scale(.5)
+
+        rotate(360deg);
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+/* ===========================
+   CARD ENTRY
+=========================== */
+
+
+.home-card{
+
+
+    animation:
+
+    cardAppear .8s ease forwards;
+
+
+}
+
+
+
+.home-card:nth-child(2){
+
+    animation-delay:.2s;
+
+}
+
+
+
+.home-card:nth-child(3){
+
+    animation-delay:.4s;
+
+}
+
+
+
+.home-card:nth-child(4){
+
+    animation-delay:.6s;
+
+}
+
+
+
+
+@keyframes cardAppear{
+
+
+    from{
+
+
+        opacity:0;
+
+
+        transform:
+
+        translateY(40px);
+
+
+    }
+
+
+
+    to{
+
+
+        opacity:1;
+
+
+        transform:
+
+        translateY(0);
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+/* ===========================
+   BUTTON EFFECT
+=========================== */
+
+
+.enter-button{
+
+
+    animation:
+
+    buttonPulse 2s infinite;
+
+
+}
+
+
+
+
+
+@keyframes buttonPulse{
+
+
+    0%{
+
+
+        box-shadow:
+
+        0 0 0 0
+
+        rgba(255,255,255,.5);
+
+
+    }
+
+
+
+    70%{
+
+
+        box-shadow:
+
+        0 0 0 20px
+
+        rgba(255,255,255,0);
+
+
+    }
+
+
+
+    100%{
+
+
+        box-shadow:
+
+        0 0 0 0
+
+        rgba(255,255,255,0);
+
+
+    }
+
+
+}
